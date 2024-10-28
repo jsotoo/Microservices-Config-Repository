@@ -127,8 +127,8 @@ Routes:
         RouteClaimsRequirement: 
             userType: SALESMAN   
         DangerousAcceptAnyServerCertificateValidator: true    
-
- DownstreamPathTemplate: /api/PoliciesVersion
+    -
+        DownstreamPathTemplate: /api/PoliciesVersion
         DownstreamScheme: http
         UpstreamPathTemplate: /api/PoliciesVersion
         ServiceName: Microservices.Demo.Policy.API
@@ -162,9 +162,6 @@ Routes:
         DangerousAcceptAnyServerCertificateValidator: true
         AddHeadersToRequest:
             AgentLogin: Claims[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier] > value[0] > |
-
-
-
 GlobalConfiguration:
     RequestIdKey: OcRequestId
     AdministrationPath: /administration
