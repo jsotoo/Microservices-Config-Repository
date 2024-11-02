@@ -145,9 +145,9 @@ Routes:
         DangerousAcceptAnyServerCertificateValidator: true
         
     -
-        DownstreamPathTemplate: /api/Report/policy
+        DownstreamPathTemplate: /api/Reports/policy
         DownstreamScheme: http
-        UpstreamPathTemplate: /api/Report/policy
+        UpstreamPathTemplate: /api/Reports/policy
         ServiceName: Microservices.Demo.Report.API
         UpstreamHttpMethod:
             - Get
